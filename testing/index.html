@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSP Pinball</title>
+    <style>
+        .pinball-machine {
+            background-color: #f0d0a0;
+            width: 400px;
+            height: 750px;
+            position: relative;
+            border: 2px solid #333;
+        }
+        .outer-wall {
+            border: 5px solid #333;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 20px 20px 0 0;
+        }
+        .circular-bumper {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .flipper {
+            width: 80px;
+            height: 20px;
+            background-color: #333;
+            position: absolute;
+            bottom: 100px;
+        }
+        .launch-lane {
+            width: 30px;
+            height: 300px;
+            background-color: #333;
+            position: absolute;
+            right: 20px;
+            bottom: 100px;
+        }
+        .targets {
+            width: 80px;
+            height: 20px;
+            background-color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="pinball-machine">
+        <div class="outer-wall"></div>
+        
+        <!-- Circular bumpers -->
+        <div class="circular-bumper" style="top: 100px; left: 50px;"></div>
+        <div class="circular-bumper" style="top: 200px; left: 150px;"></div>
+        <div class="circular-bumper" style="top: 300px; left: 250px;"></div>
+        <div class="circular-bumper" style="top: 200px; right: 50px;"></div>
+        
+        <!-- Flippers -->
+        <div class="flipper" style="left: 80px; transform: rotate(30deg);"></div>
+        <div class="flipper" style="right: 80px; transform: rotate(-30deg);"></div>
+        
+        <!-- Launch lane -->
+        <div class="launch-lane"></div>
+        
+        <!-- Targets -->
+        <div class="targets" style="top: 50px; left: 160px;"></div>
+        <div class="targets" style="bottom: 200px; right: 50px;"></div>
+    </div>
+</body>
+</html>
